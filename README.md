@@ -1,4 +1,4 @@
-# MCP Client
+# The Dumbest MCP Client
 
 The world's simplest example of a client for interacting with Claude AI using the Model Context Protocol (MCP) to enable tool usage with YouTube context.
 
