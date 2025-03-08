@@ -1,0 +1,24 @@
+{
+  "name": "mcp-client",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "bun-profile run src/index.ts",
+    "dev": "bun-profile --watch src/index.ts",
+    "build": "bun-profile build ./src/index.ts --outdir ./dist",
+    "typecheck": "tsc --noEmit",
+    "test": "bun-profile test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "spawn-rx": "^5.1.2"
+  },
+  "devDependencies": {
+    "@anaisbetts/mcp-youtube": "^0.5.1"
+  }
+}
