@@ -3,7 +3,6 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js';
-import { spawn } from 'child_process';
 import path from 'path';
 import { findActualExecutable } from 'spawn-rx';
 import { fileURLToPath } from 'url';
@@ -101,7 +100,7 @@ async function main() {
         });
         
         // Check if the tool response has content
-        const toolResponseContent = toolResponse.content || [];
+        const toolResponseContent: any = toolResponse.content || [];
         console.log(`\nTool response received: ${toolResponseContent[0]?.type === 'text' ? 'text' : 'other content type'}`);
         
         // Send the tool response back to Claude
